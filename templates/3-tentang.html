@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ScabiesTracker</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Flaticon Font -->
+    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet">
+</head>
+
+<body>
+    
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-lg-5">
+            <a href="" class="navbar-brand d-block d-lg-none">
+                <h1 class="m-0 display-5 text-capitalize font-italic text-white"><span class="text-primary">Scabies</span>Tracker</h1><span class="text-primary">Untuk </span>Kucing</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                <div class="navbar-nav mr-auto py-0">
+
+
+                    <a href="/" class="nav-item nav-link">Beranda</a>
+                    <a href="{{ url_for('learnmore') }}" class="nav-item nav-link">Apa itu Scabies</a>
+                    <a href="{{ url_for('mulai') }}" class="nav-item nav-link">Mulai Deteksi</a>
+                    <a href="{{ url_for('tentang') }}" class="nav-item nav-link active">Tentang Kami</a>
+                    <a href="{{ url_for('team') }}" class="nav-item nav-link">Team Member</a>
+
+
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+ 
+
+      <!-- Team Start -->
+    <div class="container mt-5 pt-5 pb-3">
+        <div class="d-flex flex-column text-center mb-5">
+            <h4 class="text-secondary mb-3"> </h4>
+            <h1 class="display-4 m-0">Tentang <span class="text-primary">Kami</span></h1>
+            <p class="m-0">Scabies Tracker Website<br><br>
+                Kami adalah kelompok 4 orang yang terdiri dari mahasiswa berbagai Program Studi di sebuah perguruan tinggi di Indonesia. Kami mengambil bagian dalam proyek akhir SIB "Artificial Intelligence for StartUps 02 (AI 4 StartUps 02)" yang dilaksanakan pada Kode Kegiatan SIB-513925 dengan durasi 4 bulan dari 16 Feb 2023 - 30 Jun 2023.
+                <br><br>Sebagai kelompok mahasiswa yang terlibat dalam proyek akhir AI 4 StartUps 02, kami bertujuan untuk mengembangkan aplikasi yang berfokus pada penggunaan kecerdasan buatan untuk memperbaiki proses bisnis dan meningkatkan efisiensi di industri startup. Dalam proyek akhir ini, kami memilih untuk membuat aplikasi pendeteksi scabies pada kucing yang diberi nama "ScabiesTracker" dengan menggunakan teknologi kecerdasan buatan domain data scientist.
+                <br><br>Kami adalah tim yang terdiri dari anggota dengan latar belakang dan keahlian yang berbeda-beda, namun kami bersatu dalam misi yang sama untuk mengembangkan solusi teknologi yang bermanfaat bagi masyarakat. Kami berkomitmen untuk memberikan yang terbaik dalam proyek akhir ini dan terus belajar dan berinovasi dalam penggunaan teknologi kecerdasan buatan.
+                <br><br>Kami berterima kasih kepada coach Power Academy yang telah memberikan bimbingan dan dukungan selama SIB ini berlangsung. Terima kasih juga kepada pihak terkait lainnya yang telah mendukung kami dalam mengembangkan proyek akhir ini.
+                Kami berharap aplikasi ScabiesTracker dapat memberikan manfaat bagi pemilik kucing dan industri startup secara umum, serta menjadi kontribusi kami dalam pengembangan teknologi kecerdasan buatan di Indonesia.
+        </div>
+    </div>
+    <!-- Team End -->
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
+        <div class="row pt-5">
+            <div class="col-lg-4 col-md-12 mb-5">
+                <h1 class="mb-3 display-5 text-capitalize text-white"><span class="text-primary">Scabies</span>Tracker</h1>
+                <p class="m-0">Selamat Datang di ScabiesTracker! <br><br>
+                    ScabiesTracker adalah website pendeteksi scabies pada kucing yang dirancang untuk membantu pemilik kucing untuk memantau kesehatan hewan peliharaan mereka. ScabiesTracker dibuat dengan survei ke 100+ pemilik kucing</p>
+            </div>
+            </div>
+    </div>
+    <div class="container-fluid text-white py-4 px-sm-3 px-md-5" style="background: #111111;">
+        <div class="row">
+            <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0 text-white"> &copy; <a class="text-white font-weight-bold" href="#">2023</a>. All Rights Reserved.  </p>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

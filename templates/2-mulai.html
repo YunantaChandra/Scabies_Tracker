@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ScabiesTracker</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Flaticon Font -->
+    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet">
+</head>
+
+<body>
+    
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-lg-5">
+            <a href="" class="navbar-brand d-block d-lg-none">
+                <h1 class="m-0 display-5 text-capitalize font-italic text-white"><span class="text-primary">Scabies</span>Tracker</h1><span class="text-primary">Untuk </span>Kucing</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                <div class="navbar-nav mr-auto py-0">
+
+
+                    <a href="/" class="nav-item nav-link">Beranda</a>
+                    <a href="{{ url_for('learnmore') }}" class="nav-item nav-link">Apa itu Scabies</a>
+                    <a href="{{ url_for('mulai') }}" class="nav-item nav-link active">Mulai Deteksi</a>
+                    <a href="{{ url_for('tentang') }}" class="nav-item nav-link">Tentang Kami</a>
+                    <a href="{{ url_for('team') }}" class="nav-item nav-link">Team Member</a>
+
+
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- About Start -->
+    <div class="container py-5">
+      <div class="row py-5">
+        <div class="col-lg-7 pb-5 pb-lg-0 px-3 px-lg-5">
+            <h1 class="mb-3 display-5 text-capitalize text-white"><span class="text-primary">Isilah Form Dibawah</span></h1>
+            <form action="/predict" method="post">
+              <!-- Ras -->
+              <div class="mb-3">
+                  <p class="mb-0">  <b>Pilih Ras Kucing</b> </p>
+                  &emsp; &emsp; &emsp;  
+                  <input class="form-check-input" name="ras" type="radio" value="0" id="anggora" required>
+                  <label class="form-check-label mr-5" for="anggora">Anggora</label>
+                  <input class="form-check-input" name="ras" type="radio" value="1" id="persia">
+                  <label class="form-check-label mr-5" for="persia">Persia</label>
+                  <input class="form-check-input" name="ras" type="radio" value="2" id="lokal">
+                  <label class="form-check-label" for="lokal">Lokal</label>
+                </div>
+                <!-- Ras -->           
+
+              <!-- gejala1 -->
+              <div class="mb-3">
+                  <p class="mb-0"><b>Gejala 1 - sering mengalami gatal-gatal</b></p>
+                  &emsp; &emsp; &emsp;  <input class="form-check-input" name="gejala1" type="radio" value="1" id="ya" required>
+                  <label class="form-check-label mr-5" for="ya">
+                    Ya
+                  </label>
+                  <input class="form-check-input" name="gejala1" type="radio" value="0"
+                    id="tidak">
+                  <label class="form-check-label" for="tidak">
+                    Tidak
+                  </label>
+                </div>
+              <!-- gejala1 -->
+              <!-- gejala2 -->
+              <div class="mb-3">
+                  <p class="mb-0"><b>Gejala 2 - Sering Menggaruk-Garuk Tubuh</b></p>
+                  &emsp; &emsp; &emsp;  <input class="form-check-input" name="gejala2" type="radio" value="1" id="ya" required>
+                  <label class="form-check-label mr-5" for="ya">
+                    Ya
+                  </label>
+                  <input class="form-check-input" name="gejala2" type="radio" value="0"
+                    id="tidak">
+                  <label class="form-check-label" for="tidak">
+                    Tidak
+                  </label>
+                </div>
+              <!-- gejala2 -->
+              <!-- gejala3 -->
+              <div class="mb-3">
+                  <p class="mb-0"><b>Gejala 3 - Mengalami Kemerahan Pada Kulit</b></p>
+                  &emsp; &emsp; &emsp;  <input class="form-check-input" name="gejala3" type="radio" value="1" id="ya" required>
+                  <label class="form-check-label mr-5" for="ya">
+                    Ya
+                  </label>
+                  <input class="form-check-input" name="gejala3" type="radio" value="0"
+                    id="tidak">
+                  <label class="form-check-label" for="tidak">
+                    Tidak
+                  </label>
+                </div>
+              <!-- gejala3 -->
+              <!-- gejala4 -->
+              <div class="mb-3">
+                  <p class="mb-0"><b>Gejala 4 - Memiliki Kerak Pada Tubuh</b></p>
+                  &emsp; &emsp; &emsp;  <input class="form-check-input" name="gejala4" type="radio" value="1" id="ya" required>
+                  <label class="form-check-label mr-5" for="ya">
+                    Ya
+                  </label>
+                  <input class="form-check-input" name="gejala4" type="radio" value="0"
+                    id="tidak">
+                  <label class="form-check-label" for="tidak">
+                    Tidak
+                  </label>
+                </div>
+              <!-- gejala4 -->
+              <!-- gejala5 -->
+              <div class="mb-3">
+                  <p class="mb-0"><b>Gejala 5 - Mengalami Lelah Dan Lemas</b></p>
+                  &emsp; &emsp; &emsp;  <input class="form-check-input" name="gejala5" type="radio" value="1" id="ya" required>
+                  <label class="form-check-label mr-5" for="ya">
+                    Ya
+                  </label>
+                  <input class="form-check-input" name="gejala5" type="radio" value="0"
+                    id="tidak">
+                  <label class="form-check-label" for="tidak">
+                    Tidak
+                  </label>
+                </div>
+              <!-- gejala5 -->
+              <!-- gejala6 -->
+              <div class="mb-3">
+                  <p class="mb-0"><b>Gejala 6 - Memiliki Infeksi Pada Kulit</b></p>
+                  &emsp; &emsp; &emsp;  <input class="form-check-input" name="gejala6" type="radio" value="1" id="ya" required>
+                  <label class="form-check-label mr-5" for="ya">
+                    Ya
+                  </label>
+                  <input class="form-check-input" name="gejala6" type="radio" value="0"
+                    id="tidak">
+                  <label class="form-check-label" for="tidak">
+                    Tidak
+                  </label>
+                </div>
+              <!-- gejala6 -->
+              <!-- gejala7 -->
+              <div class="mb-3">
+                  <p class="mb-0"><b>Gejala 7 - Sering Menjilati Tubuhnya</b></p>
+                  &emsp; &emsp; &emsp;  <input class="form-check-input" name="gejala7" type="radio" value="1" id="ya" required>
+                  <label class="form-check-label mr-5" for="ya">
+                    Ya
+                  </label>
+                  <input class="form-check-input" name="gejala7" type="radio" value="0"
+                    id="tidak">
+                  <label class="form-check-label" for="tidak">
+                    Tidak
+                  </label>
+                </div>
+              <!-- gejala7 -->
+              <!-- gejala8 -->
+              <div class="mb-3">
+                  <p class="mb-0"><b>Gejala 8 - Memiliki Bercak Bersisik Pada Kulit</b></p>
+                  &emsp; &emsp; &emsp;  <input class="form-check-input" name="gejala8" type="radio" value="1" id="ya" required>
+                  <label class="form-check-label mr-5" for="ya">
+                    Ya
+                  </label>
+                  <input class="form-check-input" name="gejala8" type="radio" value="0"
+                    id="tidak">
+                  <label class="form-check-label" for="tidak">
+                    Tidak
+                  </label>
+                </div>
+              <!-- gejala8 -->
+              <!-- gejala9 -->
+              <div class="mb-3">
+                  <p class="mb-0"><b>Gejala 9 - Sering Menggelengkan Kepala Secara Tidak Wajar</b></p>
+                  &emsp; &emsp; &emsp;  <input class="form-check-input" name="gejala9" type="radio" value="1" id="ya" required>
+                  <label class="form-check-label mr-5" for="ya">
+                    Ya
+                  </label>
+                  <input class="form-check-input" name="gejala9" type="radio" value="0"
+                    id="tidak">
+                  <label class="form-check-label" for="tidak">
+                    Tidak
+                  </label>
+                </div>
+              <!-- gejala9 -->
+              <!-- gejala10 -->
+              <div class="mb-3">
+                  <p class="mb-0"><b>Gejala 10 - Bulu Rontok</b></p>
+                  &emsp; &emsp; &emsp;  <input class="form-check-input" name="gejala10" type="radio" value="1" id="ya" required>
+                  <label class="form-check-label mr-5" for="ya">
+                    Ya
+                  </label>
+                  <input class="form-check-input" name="gejala10" type="radio" value="0"
+                    id="tidak">
+                  <label class="form-check-label" for="tidak">
+                    Tidak
+                  </label>
+                </div>
+              <!-- gejala10 -->
+              <!-- gejala11 -->
+              <div class="mb-3">
+                  <p class="mb-0"><b>Gejala 11 - Memiliki Luka Pada Bagian Tubuh Tertentu</b></p>
+                  &emsp; &emsp; &emsp;  <input class="form-check-input" name="gejala11" type="radio" value="1" id="ya" required>
+                  <label class="form-check-label mr-5" for="ya">
+                    Ya
+                  </label>
+                  <input class="form-check-input" name="gejala11" type="radio" value="0"
+                    id="tidak">
+                  <label class="form-check-label" for="tidak">
+                    Tidak
+                  </label>
+                </div>
+              <!-- gejala11 -->
+              <!-- gejala12 -->
+              <div class="mb-3">
+                  <p class="mb-0"><b>Gejala 12 - Memiliki Ekor Yang Berminyak</b></p>
+                  &emsp; &emsp; &emsp;  <input class="form-check-input" name="gejala12" type="radio" value="1" id="ya" required>
+                  <label class="form-check-label mr-5" for="ya">
+                    Ya
+                  </label>
+                  <input class="form-check-input" name="gejala12" type="radio" value="0"
+                    id="tidak">
+                  <label class="form-check-label" for="tidak">
+                    Tidak
+                  </label>
+                </div>
+              <!-- gejala12 -->
+              <!-- gejala13 -->
+              <div class="mb-3">
+                  <p class="mb-0"><b>Gejala 13 - Mengalami Bengkak Pada Bagian Tubuh Tertentu</b></p>
+                  &emsp; &emsp; &emsp;  <input class="form-check-input" name="gejala13" type="radio" value="1" id="ya" required>
+                  <label class="form-check-label mr-5" for="ya">
+                    Ya
+                  </label>
+                  <input class="form-check-input" name="gejala13" type="radio" value="0"
+                    id="tidak">
+                  <label class="form-check-label" for="tidak">
+                    Tidak
+                  </label>
+                </div>
+              <!-- gejala13 -->
+              <!-- gejala14 -->
+              <div class="mb-3">
+                  <p class="mb-0"><b>Gejala 14 - Bersin</b></p>
+                  &emsp; &emsp; &emsp;  <input class="form-check-input" name="gejala14" type="radio" value="1" id="ya" required>
+                  <label class="form-check-label mr-5" for="ya">
+                    Ya
+                  </label>
+                  <input class="form-check-input" name="gejala14" type="radio" value="0"
+                    id="tidak">
+                  <label class="form-check-label" for="tidak">
+                    Tidak
+                  </label>
+                </div>
+              <!-- gejala14 -->
+              <!-- gejala15 -->
+              <div class="mb-3">
+                  <p class="mb-0"><b>Gejala 15 - Mengalami Gangguan Pada Pencernaan</b></p>
+                  &emsp; &emsp; &emsp;  <input class="form-check-input" name="gejala15" type="radio" value="1" id="ya" required>
+                  <label class="form-check-label mr-5" for="ya">
+                    Ya
+                  </label>
+                  <input class="form-check-input" name="gejala15" type="radio" value="0"
+                    id="tidak">
+                  <label class="form-check-label" for="tidak">
+                    Tidak
+                  </label>
+                </div>
+              <!-- gejala15 -->
+              <!-- gejala16 -->
+              <div class="mb-3">
+                  <p class="mb-0"><b>Gejala 16 - Sering Menggigit</b></p>
+                  &emsp; &emsp; &emsp;  <input class="form-check-input" name="gejala16" type="radio" value="1" id="ya" required>
+                  <label class="form-check-label mr-5" for="ya">
+                    Ya
+                  </label>
+                  <input class="form-check-input" name="gejala16" type="radio" value="0"
+                    id="tidak">
+                  <label class="form-check-label" for="tidak">
+                    Tidak
+                  </label>
+              </div>
+              <!-- gejala16 -->
+              <!-- gejala17 -->
+              <div class="mb-3">
+                  <p class="mb-0"><b>Gejala 17 - Memiliki Kotoran Menumpuk Di Bagian Telinga</b></p>
+                  &emsp; &emsp; &emsp;  <input class="form-check-input" name="gejala17" type="radio" value="1" id="ya" required>
+                  <label class="form-check-label mr-5" for="ya">
+                    Ya
+                  </label>
+                  <input class="form-check-input" name="gejala17" type="radio" value="0"
+                    id="tidak">
+                  <label class="form-check-label" for="tidak">
+                    Tidak
+                  </label>
+              </div>
+              <!-- gejala17 -->
+              <!-- gejala18 -->
+              <div class="mb-3">
+                  <p class="mb-0"><b>Gejala 18 - Sering Dihinggapi Tungau Di Bagian Bulunya</b></p>
+                  &emsp; &emsp; &emsp;  <input class="form-check-input" name="gejala18" type="radio" value="1" id="ya" required>
+                  <label class="form-check-label mr-5" for="ya">
+                    Ya
+                  </label>
+                  <input class="form-check-input" name="gejala18" type="radio" value="0"
+                    id="tidak">
+                  <label class="form-check-label" for="tidak">
+                    Tidak
+                  </label>
+              </div>
+              <!-- gejala18 -->
+              <!-- gejala19 -->
+              <div class="mb-3">
+                  <p class="mb-0"><b>Gejala 19 - Memiliki Cairan Kecoklatan Di Bagian Ekornya</b></p>
+                  &emsp; &emsp; &emsp;  <input class="form-check-input" name="gejala19" type="radio" value="1" id="ya" required>
+                  <label class="form-check-label mr-5" for="ya">
+                    Ya
+                  </label>
+                  <input class="form-check-input" name="gejala19" type="radio" value="0"
+                    id="tidak">
+                  <label class="form-check-label" for="tidak">
+                    Tidak
+                  </label>
+              </div>
+              <!-- gejala19 -->
+              <!-- gejala20 -->
+              <div class="mb-3">
+                  <p class="mb-0"><b>Gejala 20 - Memiliki Butiran Telur-Telur Tungau Di Bagian Bulunya</b></p>
+                  &emsp; &emsp; &emsp;  <input class="form-check-input" name="gejala20" type="radio" value="1" id="ya" required>
+                  <label class="form-check-label mr-5" for="ya">
+                    Ya
+                  </label>
+                  <input class="form-check-input" name="gejala20" type="radio" value="0"
+                    id="tidak">
+                  <label class="form-check-label" for="tidak">
+                    Tidak
+                  </label>
+              </div>
+              <!-- gejala20 -->
+              <!-- gejala21 -->
+              <div class="mb-3">
+                  <p class="mb-0"><b>Gejala 21 - Kucing Pernah Mengalami Scabies</b></p>
+                  &emsp; &emsp; &emsp;  <input class="form-check-input" name="gejala21" type="radio" value="1" id="ya" required>
+                  <label class="form-check-label mr-5" for="ya">Ya</label>
+                  <input class="form-check-input" name="gejala21" type="radio" value="0"
+                    id="tidak">
+                  <label class="form-check-label" for="tidak">Tidak</label>
+              </div>
+              <!-- gejala21 -->
+              <a href="" class="btn btn-lg btn-primary mt-3 mt-md-4 px-4">Reset</a>
+              <button type="submit" class="btn btn-lg btn-secondary mt-3 mt-md-4 px-4">Prediksi</button>
+            </form>
+            <br>
+            <div class="col-40 pt-5 px-2 card gx-3" style="background-color: #E2F6FF;">
+              <h3 class="text-center">Hasil Prediksi : </h2>
+                {% if hasil_prediksi %}
+                <p class="text-center">Kucing diprediksi <span class="fw-bold">{{hasil_prediksi}}</span></p>
+                {% endif %}
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- About End -->
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
+        <div class="row pt-5">
+            <div class="col-lg-4 col-md-12 mb-5">
+                <h1 class="mb-3 display-5 text-capitalize text-white"><span class="text-primary">Scabies</span>Tracker</h1>
+                <p class="m-0">Selamat Datang di ScabiesTracker! <br><br>
+                    ScabiesTracker adalah website pendeteksi scabies pada kucing yang dirancang untuk membantu pemilik kucing untuk memantau kesehatan hewan peliharaan mereka. ScabiesTracker dibuat dengan survei ke 100+ pemilik kucing</p>
+            </div>
+            </div>
+    </div>
+    <div class="container-fluid text-white py-4 px-sm-3 px-md-5" style="background: #111111;">
+        <div class="row">
+            <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0 text-white"> &copy; <a class="text-white font-weight-bold" href="#">2023</a>. All Rights Reserved.  </p>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
