@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ScabiesTracker</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Flaticon Font -->
+    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet">
+</head>
+
+<body>
+    
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-lg-5">
+            <a href="" class="navbar-brand d-block d-lg-none">
+                <h1 class="m-0 display-5 text-capitalize font-italic text-white"><span class="text-primary">Scabies</span>Tracker</h1><span class="text-primary">Untuk </span>Kucing</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                <div class="navbar-nav mr-auto py-0">
+
+
+                    <a href="/" class="nav-item nav-link">Beranda</a>
+                    <a href="{{ url_for('learnmore') }}" class="nav-item nav-link active">Apa itu Scabies</a>
+                    <a href="{{ url_for('mulai') }}" class="nav-item nav-link">Mulai Deteksi</a>
+                    <a href="{{ url_for('tentang') }}" class="nav-item nav-link">Tentang Kami</a>
+                    <a href="{{ url_for('team') }}" class="nav-item nav-link">Team Member</a>
+
+
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+  
+
+
+    
+
+    <!-- About Start -->
+    <div class="container py-5">
+        <div class="row py-5">
+            <div class="col-lg-7 pb-5 pb-lg-0 px-3 px-lg-5">
+                <h1 class="text-secondary mb-3">Apa itu Scabies ?</h1>
+                <h5 class="text-muted mb-3"> </p>
+                <img class="w-100" src="static\img\apa1.jpg" alt="Image">
+                <h5 class="text-muted mb-3">Scabies, atau yang juga dikenal sebagai kudis, adalah infeksi kulit yang disebabkan oleh tungau kecil yang dikenal sebagai Sarcoptes scabiei. Meskipun scabies dapat terjadi pada manusia dan hewan, kali ini kita akan membahas tentang scabies pada kucing.</p>
+                <h5 class="text-muted mb-3">Gejala awal dari scabies pada kucing meliputi rasa gatal yang sangat intens di area sekitar telinga, leher, perut, dan kaki. Kucing yang terinfeksi scabies juga akan menggaruk, menjilat, dan menggigit area yang terinfeksi, sehingga dapat menyebabkan kerusakan kulit dan kerontokan bulu. Kucing yang menderita scabies juga mungkin menjadi sangat cemas dan mudah terganggu..</p>
+                <h5 class="text-muted mb-3">Scabies pada kucing dapat menyebar dengan sangat cepat, terutama jika ada lebih dari satu kucing di rumah yang terinfeksi. Tungau scabies berkembang biak dengan sangat cepat, sehingga penanganan segera sangat diperlukan untuk mencegah penyebaran infeksi..</p>
+                <h5 class="text-muted mb-3">Perawatan scabies pada kucing melibatkan penggunaan obat-obatan yang dapat membunuh tungau scabies dan meredakan gejala seperti rasa gatal dan peradangan kulit. Obat-obatan ini dapat berupa salep, shampoo, atau suntikan tergantung pada tingkat keparahan infeksi. Selain itu, perawatan tambahan seperti membersihkan lingkungan tempat kucing tinggal dan mencuci semua barang-barang yang mungkin terkontaminasi juga dapat membantu mencegah penyebaran scabies pada kucing lain..</p>
+                <h5 class="text-muted mb-3">Jika Anda mencurigai bahwa kucing Anda menderita scabies, sangat disarankan untuk segera mengunjungi dokter hewan untuk penanganan segera. Dengan perawatan yang tepat, kucing Anda dapat pulih sepenuhnya dari scabies dan kembali menjadi kucing yang sehat dan bahagia..</p>
+                <h5 class="text-muted mb-3">Atau kalian Juga bisa melakukan deteksi awal mengunakan AI Scabies Tracker Ini, dengan mengeklik tombol dibawah</p>
+                <h5 class="text-muted mb-3"> </p>
+                <a href="{{ url_for('mulai') }}" class="btn btn-lg btn-primary mt-3 px-4">Mulai deteksi</a>
+            </div>
+             </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
+        <div class="row pt-5">
+            <div class="col-lg-4 col-md-12 mb-5">
+                <h1 class="mb-3 display-5 text-capitalize text-white"><span class="text-primary">Scabies</span>Tracker</h1>
+                <p class="m-0">Selamat Datang di ScabiesTracker! <br><br>
+                    ScabiesTracker adalah website pendeteksi scabies pada kucing yang dirancang untuk membantu pemilik kucing untuk memantau kesehatan hewan peliharaan mereka. ScabiesTracker dibuat dengan survei ke 100+ pemilik kucing</p>
+            </div>
+            </div>
+    </div>
+    <div class="container-fluid text-white py-4 px-sm-3 px-md-5" style="background: #111111;">
+        <div class="row">
+            <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0 text-white"> &copy; <a class="text-white font-weight-bold" href="#">2023</a>. All Rights Reserved.  </p>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
